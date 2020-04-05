@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "defines": [
+                "ARDUINO=10800",
+                "USBCON",
+                "MFG_LAFVIN"
+            ],
+            "includePath": [
+                "C:\\Users\\johng\\OneDrive\\Documents\\Arduino\\libraries\\HCSR04\\src",
+                "C:\\Users\\johng\\OneDrive\\Documents\\Arduino\\libraries\\**",
+                "C:\\Users\\johng\\OneDrive\\Documents\\Arduino\\hardware\\tools\\**",
+                "C:\\Arduino\\tools\\**",
+                "C:\\Arduino\\hardware\\arduino\\avr\\**",
+                "C:\\Arduino\\hardware\\tools\\**",
+                "C:\\Arduino\\hardware\\tools\\avr\\avr\\include\\**",
+                "C:\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\7.3.0\\include\\**",
+                "C:\\Arduino\\libraries\\**",
+                "C:\\arduino\\libraries\\Servo\\src\\**",
+                "${workspaceRoot}"
+            ],
+            "forcedInclude": [
+                "C:\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe"
+        }
+    ],
+    "version": 4
+}

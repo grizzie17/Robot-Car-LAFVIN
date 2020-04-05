@@ -1,2 +1,3 @@
-# Robot-Car-LAFVIN
-Arduino code for a Robot Car
+# Robot-Car LAFVIN #
+
+Robot-Car project

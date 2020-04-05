@@ -1,0 +1,48 @@
+---
+BasedOnStyle: WebKit
+IndentWidth: 4
+# ---
+# Language: Cpp
+# Standard: c++17
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+AlignTrailingComments: true
+AllowShortFunctionsOnASingleLine: false
+AlwaysBreakAfterReturnType: All
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterExternBlock: true
+  AfterFunction: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  SplitEmptyFunction: false
+
+ColumnLimit:     96
+CompactNamespaces: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth: 8
+ContinuationIndentWidth: 8
+FixNamespaceComments: true
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: None
+
+SpaceAfterLogicalNot: true
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInConditionalStatement: true
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: true
+SpacesInSquareBrackets: false
+
+
+TabWidth: 4
+UseTab: ForContinuationAndIndentation
+
+...
