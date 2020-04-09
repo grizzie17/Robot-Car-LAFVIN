@@ -8,8 +8,12 @@ public:
 	CDelay();
 	CDelay( unsigned long nMicroSeconds );
 
+public:
 	void
 	init( unsigned long nMicroSeconds );
+
+	void
+	reset();
 
 	bool
 	timesUp( unsigned long nCurrentTime );
@@ -20,16 +24,25 @@ protected:
 };
 
 
-CDelay::CDelay() : m_nDelay( 250 ), m_nPreviousTime( 0 )
+CDelay::CDelay()
+		: m_nDelay( 250 )
+		, m_nPreviousTime( 0 )
 {}
 
-CDelay::CDelay( unsigned long nMicroSeconds ) : m_nDelay( nMicroSeconds )
+CDelay::CDelay( unsigned long nMicroSeconds )
+		: m_nDelay( nMicroSeconds )
 {}
 
 void
 CDelay::init( unsigned long nMicroSeconds )
 {
 	m_nDelay = nMicroSeconds;
+	m_nPreviousTime = 0;
+}
+
+void
+CDelay::reset()
+{
 	m_nPreviousTime = 0;
 }
 
@@ -48,4 +61,4 @@ CDelay::timesUp( unsigned long nCurrentTime )
 }
 
 
-#endif  // H_TIMER
+#endif    // H_TIMER

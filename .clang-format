@@ -1,48 +1,92 @@
 ---
 BasedOnStyle: WebKit
+
+# Normal Stuff
 IndentWidth: 4
-# ---
-# Language: Cpp
-# Standard: c++17
-DerivePointerAlignment: false
-PointerAlignment: Left
+TabWidth: 4
+UseTab: ForContinuationAndIndentation
+ColumnLimit: 80
 
+AlignConsecutiveDeclarations: true
+AlignConsecutiveMacros: true
 AlignTrailingComments: true
-AllowShortFunctionsOnASingleLine: false
-AlwaysBreakAfterReturnType: All
 
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortFunctionsOnASingleLine: false
+
+AlwaysBreakAfterReturnType: All
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+
+# Braces
 BreakBeforeBraces: Custom
 BraceWrapping:
   AfterClass: true
   AfterControlStatement: true
+  AfterEnum: true
   AfterExternBlock: true
   AfterFunction: true
   AfterStruct: true
   AfterUnion: true
   BeforeCatch: true
   BeforeElse: true
+  IndentBraces:    false
   SplitEmptyFunction: false
+  SplitEmptyNamespace: false
+  SplitEmptyRecord: false
 
-ColumnLimit:     96
+BreakBeforeBinaryOperators: All
+BreakBeforeInheritanceComma: false
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializersBeforeComma: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: true
+
 CompactNamespaces: true
-ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
 ConstructorInitializerIndentWidth: 8
 ContinuationIndentWidth: 8
+
+
 FixNamespaceComments: true
+
+IndentCaseLabels: false
+IndentGotoLabels: false
+IndentPPDirectives: AfterHash
+
+KeepEmptyLinesAtTheStartOfBlocks: false
+
 MaxEmptyLinesToKeep: 2
 NamespaceIndentation: None
 
+# Pointers
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+ReflowComments: false
+
+
 SpaceAfterLogicalNot: true
+SpaceBeforeAssignmentOperators: true
 SpaceInEmptyBlock: false
 SpaceInEmptyParentheses: false
-SpacesBeforeTrailingComments: 2
+SpacesBeforeTrailingComments: 4
 SpacesInConditionalStatement: true
 SpacesInCStyleCastParentheses: false
 SpacesInParentheses: true
 SpacesInSquareBrackets: false
 
+StatementMacros:
+  - Q_UNUSED
+  - QT_REQUIRE_VERSION
+  - interface_
 
-TabWidth: 4
-UseTab: ForContinuationAndIndentation
+---
+Language: Cpp
+Standard: c++17
+
 
 ...

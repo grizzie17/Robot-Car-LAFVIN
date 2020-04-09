@@ -17,5 +17,16 @@
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
 		"editor.formatOnPaste": true,
+		"github.host": "github.com",
+		"github.username": "grizzie17",
+		"githubPullRequests.hosts": [
+			{
+				"host": "https://github.com",
+				"username": "grizzie17"
+			}
+		],
+		"github.repositories": [
+			"grizzie17/Robot-Car-LAFVIN"
+		],
 	}
 }

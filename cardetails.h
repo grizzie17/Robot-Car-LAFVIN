@@ -5,16 +5,19 @@
 
 
 //--- Pin Assignments ---------------------------
-const int kPinMotorRightSpeed = 3;  // ENA gray (PWM)
-const int kPinMotorRightCCW = 4;    // IN1 purple
-const int kPinMotorRightCW = 5;     // IN2 blue
-const int kPinMotorLeftCCW = 6;     // IN3 green
-const int kPinMotorLeftCW = 7;      // IN4 yellow
-const int kPinMotorLeftSpeed = 11;  // ENB orange (PWM)
+const int kPinMotorRightSpeed = 3;    // ENA gray (PWM)
+const int kPinMotorRightFWD = 4;      // IN1 purple
+const int kPinMotorRightREV = 5;      // IN2 blue
+const int kPinMotorLeftFWD = 6;       // IN3 green
+const int kPinMotorLeftREV = 7;       // IN4 yellow
+const int kPinMotorLeftSpeed = 11;    // ENB orange (PWM)
 
 const int kPinServo = 2;
 const int kPinSonicEcho = 12;
 const int kPinSonicTrig = 13;
 
+// range -30 to 30 (representing percentage) left is negative
+const int kMotorAdjustment = 15;
 
-#endif  // H_CARDETAILS
+
+#endif    // H_CARDETAILS

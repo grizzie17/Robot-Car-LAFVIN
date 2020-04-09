@@ -8,7 +8,6 @@
                 "MFG_LAFVIN"
             ],
             "includePath": [
-                "C:\\Users\\johng\\OneDrive\\Documents\\Arduino\\libraries\\HCSR04\\src",
                 "C:\\Users\\johng\\OneDrive\\Documents\\Arduino\\libraries\\**",
                 "C:\\Users\\johng\\OneDrive\\Documents\\Arduino\\hardware\\tools\\**",
                 "C:\\Arduino\\tools\\**",

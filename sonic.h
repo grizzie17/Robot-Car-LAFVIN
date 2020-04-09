@@ -18,22 +18,35 @@ public:
 	CSonic();
 	virtual ~CSonic();
 
+public:
 	void
 	init( int nTrigger, int nEcho );
 
 	double
 	getDistanceCm();
 
+	double
+	lastDistanceCm();
+
 protected:
-	int m_nPinTrigger;
-	int m_nPinEcho;
+	double
+	CmFromMicroseconds( unsigned long duration );
+
+	const unsigned long PULSE_TIMEOUT = 150000L;    // 100ms
+
+	int    m_nPinTrigger;
+	int    m_nPinEcho;
+	double m_dLastDistance;
 };
 
 
 //-----------------------------------------------
 // CSonic code
 //-----------------------------------------------
-CSonic::CSonic() : m_nPinTrigger( 0 ), m_nPinEcho( 0 )
+CSonic::CSonic()
+		: m_nPinTrigger( 0 )
+		, m_nPinEcho( 0 )
+		, m_dLastDistance( 0.0 )
 {}
 
 CSonic::~CSonic()
@@ -57,12 +70,10 @@ CSonic::getDistanceCm()
 	digitalWrite( m_nPinTrigger, HIGH );
 	delayMicroseconds( 10 );
 	digitalWrite( m_nPinTrigger, LOW );
+	delayMicroseconds( 2 );
 	unsigned long uEchoTime = pulseIn( m_nPinEcho, HIGH );
-
-	const double kSpeedOfSound
-			= 0.03313 + 0.0000606 * 19.307;  // Cair (331.3 + 0.606 * temperature)
-	double dDist = uEchoTime / 2.0 * kSpeedOfSound;
-	if ( 0 < dDist && dDist < 500 )
+	double        dDist = CmFromMicroseconds( uEchoTime );
+	if ( 0.0 < dDist && dDist < 500.0 )
 	{
 		return dDist;
 	}
@@ -72,4 +83,26 @@ CSonic::getDistanceCm()
 	}
 }
 
-#endif
+double
+CSonic::CmFromMicroseconds( unsigned long duration )
+{
+	// const double kSpeedOfSound
+	// 		= 0.03313 + 0.0000606 * 19.307;  // Cair
+	// (331.3 + 0.606 * temperature) double dDist =
+	// double( duration ) / 4.0 * kSpeedOfSound; return
+	// dDist;
+
+	double d = double( duration ) / 58.82;
+	if ( 0.0 < d )
+		m_dLastDistance = d;
+
+	return m_dLastDistance;
+}
+
+double
+CSonic::lastDistanceCm()
+{
+	return m_dLastDistance;
+}
+
+#endif    // H_SONIC
