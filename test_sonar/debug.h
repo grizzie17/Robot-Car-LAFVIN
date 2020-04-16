@@ -1,7 +1,7 @@
 #ifndef H_DEBUG
 #define H_DEBUG
 
-//#define _DEBUG
+#define _DEBUG
 
 #if defined( _DEBUG )
 

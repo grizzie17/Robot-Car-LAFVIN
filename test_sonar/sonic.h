@@ -72,17 +72,13 @@ CSonic::getDistanceCm()
 	digitalWrite( m_nPinTrigger, LOW );
 	unsigned long uEchoTime = pulseIn( m_nPinEcho, HIGH );
 	double        dDist = CmFromMicroseconds( uEchoTime );
-	if ( 2.0 <= dDist && dDist <= 400.0 )
+	if ( 0.0 < dDist && dDist < 400.0 )
 	{
 		return dDist;
 	}
-	else if ( dDist < 2.0 )
-	{
-		return 2.0;
-	}
 	else
 	{
-		return 400.0;
+		return -1.0;
 	}
 }
 

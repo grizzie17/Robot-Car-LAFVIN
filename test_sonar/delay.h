@@ -21,10 +21,6 @@ public:
 	bool
 	timesUp( unsigned long nCurrentTime );
 
-	// does not reset previous-time
-	bool
-	peekTime( unsigned long uCurrentTime );
-
 protected:
 	unsigned long m_nDelay;
 	unsigned long m_nPreviousTime;
@@ -66,20 +62,6 @@ CDelay::timesUp( unsigned long nCurrentTime )
 	if ( m_nDelay < nCurrentTime - m_nPreviousTime )
 	{
 		m_nPreviousTime = nCurrentTime;
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-
-bool
-CDelay::peekTime( unsigned long nCurrentTime )
-{
-	if ( m_nDelay < nCurrentTime - m_nPreviousTime )
-	{
 		return true;
 	}
 	else

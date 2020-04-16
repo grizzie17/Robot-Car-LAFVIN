@@ -6,27 +6,35 @@
 	],
 	"extensions": {
 		"recommendations": [
+			"ms-vscode.cpptools",
 			"vsciot-vscode.vscode-arduino"
 		]
 	},
 	"settings": {
+		// arduino
 		"arduino.path": "C:/Arduino",
+		"arduino.commandPath": "arduino_debug.exe",
+		"arduino.defaultBaudRate": 9600,
+		// C++
 		"C_Cpp.clang_format_path": "C:/Program Files/LLVM/bin/clang-format.exe",
 		"C_Cpp.clang_format_style": "file",
 		"C_Cpp.formatting": "Default",
+		// editor
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
 		"editor.formatOnPaste": true,
+		// github
 		"github.host": "github.com",
 		"github.username": "grizzie17",
+		"github.repositories": [
+			"grizzie17/Robot-Car-LAFVIN"
+		],
+		// github pull requests
 		"githubPullRequests.hosts": [
 			{
 				"host": "https://github.com",
 				"username": "grizzie17"
 			}
-		],
-		"github.repositories": [
-			"grizzie17/Robot-Car-LAFVIN"
 		],
 	}
 }

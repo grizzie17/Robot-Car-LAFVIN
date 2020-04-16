@@ -2,7 +2,7 @@
 #define H_MOTOR
 
 #ifndef MOTOR_MAP_SPEED
-#	define MOTOR_MAP_SPEED 16
+#	define MOTOR_MAP_SPEED 1
 #endif
 
 #include "debug.h"

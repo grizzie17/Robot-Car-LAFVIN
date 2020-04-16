@@ -1,11 +1,3 @@
-//===============================================
-/// @file: cardetails.h
-///
-/// Constants to be applied to the RobotCar.ino
-///
-/// The car kit is supplied by LAFVIN
-//===============================================
-
 #ifndef H_CARDETAILS
 #define H_CARDETAILS
 
@@ -28,17 +20,12 @@ const int k_nServoMaxSweep = 180 - 20;
 const int k_nServoMinSweep = 0;
 
 
-// range -30 to 30 (representing percentage)
-//	turn towards right is negative, left is positive
+// range -30 to 30 (representing percentage) left is negative
 const int kMotorAdjustment = -23;
-
-// map 0..100 into a range 64+MOTOR_MAP_SPEED..255
 #define MOTOR_MAP_SPEED 16 + 8 + 4
 
-#define TURN_SPEED 10
-#define TURN_TIME  700
-#define REV_SPEED  5
-#define REV_TIME   700
+#define TURN_SPEED 7
+#define TURN_TIME  600
 
 
 #endif    // H_CARDETAILS
